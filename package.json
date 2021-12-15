@@ -1,8 +1,9 @@
 {
-  "name": "void_wallet",
+  "name": "null_wallet",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@tauri-apps/api": "^1.0.0-beta.8",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -17,10 +18,12 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
+    "tailwind:watch": "tailwindcss -w -m -i src/index.css -o src/tailwind.css",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "tauri": "tauri"
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +42,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^1.0.0-beta.10",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.5",
+    "tailwindcss": "^3.0.2"
   }
 }
